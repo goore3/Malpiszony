@@ -333,3 +333,64 @@ Migrating to AddNameToEvents (20220426173357)
   [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6093950798112870000)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-04-27 08:37:57 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.7.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.7.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 14.9ms | Allocations: 562)
+Completed 200 OK in 59ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 5078)
+
+
+  [1m[36mAnimal Load (0.8ms)[0m  [1m[34mSELECT "animals".* FROM "animals" ORDER BY "animals"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEnclosure Load (0.4ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAnimal Create (0.7ms)[0m  [1m[32mINSERT INTO "animals" ("name", "species", "age", "description", "enclosure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Gniok"], ["species", "Małpa"], ["age", -1], ["description", "Bruh"], ["enclosure_id", 2], ["created_at", "2022-04-27 06:58:45.709290"], ["updated_at", "2022-04-27 06:58:45.709290"]]
+  [1m[36mTRANSACTION (17.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6093950798112870000)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6093950798112870000)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-04-27 08:59:47 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.7.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.7.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 562)
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 5077)
+
+
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEnclosure Load (0.5ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mAnimal Load (2.0ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  [1m[36mAnimal Load (1.3ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  [1m[36mEnclosure Load (1.2ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEnclosure Load (0.4ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mAnimal Load (2.2ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  [1m[36mEnclosure Load (1.3ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEnclosure Load (0.6ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEnclosure Load (1.7ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEnclosure Load (1.6ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6093950798112870000)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6093950798112870000)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mEnclosure Load (0.8ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEnclosure Load (0.6ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEnclosure Load (1.4ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEnclosure Load (0.5ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEnclosure Load (1.5ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEnclosure Load (1.3ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEnclosure Load (0.5ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEnclosure Load (1.3ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEnclosure Load (1.4ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEnclosure Load (0.5ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEnclosure Load (1.6ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" WHERE "enclosures"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEmployee Load (2.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  [1m[36mEnclosure Load (0.4ms)[0m  [1m[34mSELECT "enclosures".* FROM "enclosures" ORDER BY "enclosures"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mNote Load (2.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mReservation Load (1.8ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" ORDER BY "reservations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
