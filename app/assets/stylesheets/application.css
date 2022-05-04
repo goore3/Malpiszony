@@ -1,15 +1,365 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+    margin: 0;
+    font-family: merriweather, serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#main_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#headerContainer {
+    width: 100%;
+    background-image: url("panda_czerwona.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#navBar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    background-color: rgba(208, 241, 191, 0.2);
+}
+
+.navDummyStart {
+    margin-left: 5%;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    background-image: url("monki.png");
+    background-size: cover;
+    background-position: center;
+    justify-self: start;
+}
+
+#navBar p,
+a {
+    margin: 5px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-shadow: 0px 0px 6px black;
+}
+
+.menu {
+    display: flex;
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+.mainBlock {
+    margin-left: 10%;
+    margin-top: 300px;
+    padding-bottom: 300px;
+    color: wheat;
+    text-shadow: 0px 0px 4px #757f49;
+}
+
+.mainBlock h1 {
+    font-weight: 600;
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    /* text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff */
+}
+
+.mainBlock h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    /* text-shadow: -1px -1px 0 rgb(197, 197, 197), 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; */
+}
+
+#bodyContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#animalsContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-grow: 0;
+}
+
+.breakLine {
+    height: 20px;
+    width: 100%;
+    background-color: #30362f;
+}
+
+.leftPhoto {
+    width: 50%;
+    display: flex;
+}
+
+.leftPhoto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.rightText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #757F49;
+    width: 50%;
+}
+
+.rightText h1,
+h3 {
+    margin-left: 5%;
+    margin-right: 10%;
+    color: whitesmoke;
+}
+
+.rightText h3 {
+    font-weight: 100;
+}
+
+.animalPhotos {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    background-color: white;
+    /* flex-flow: row nowrap; */
+    flex: 1 1 auto;
+}
+
+.animalImage {
+    flex: 1;
+    background-color: #30362f;
+}
+
+.animalPhotos img {
+    max-width: 100%;
+    height: auto;
+}
+
+#eventContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #30362f;
+}
+
+#eventContainer h2 {
+    margin-top: 50px;
+    color: white;
+}
+
+#reservationContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 80px;
+    background-color: #30362f;
+}
+
+.leftContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticketContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    height: 100px;
+    background-color: white;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+
+.ticketPrice {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-left: 1px solid black;
+    height: 100%;
+    width: 50px;
+}
+
+.rightContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.reservationText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 50px;
+    color: black;
+    /* text-shadow: 1px 1px 5px black; */
+    background-color: white;
+    border-radius: 10px;
+}
+
+.reservationButton {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.reservationButton button {
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: #D0F1BF;
+    color: #3d3b2c;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: 'merriweather';
+    font-weight: 900;
+}
+
+#contactContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #a7bbac;
+}
+
+.contactLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.contactBox {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contactInformation {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+}
+
+.informationBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.contactText {
+    margin-right: 10px;
+}
+
+.contactDays {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactDays div {
+    display: flex;
+    flex-direction: row;
+}
+
+.contactDays h3 {
+    font-weight: bold;
+    color: black;
+    margin-left: 0;
+    margin-bottom: 5px;
+}
+
+.contactHours {
+    margin-left: auto;
+}
+
+.informationForm {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+.informationForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.informationForm label {
+    margin-top: 10px;
+}
+
+.formButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.formButton button {
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: #D0F1BF;
+    color: #3d3b2c;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: 'merriweather';
+    font-weight: 900;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex: 0 0 auto;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.logoImage {
+    flex: 1 1 auto;
+}
+
+.logoImage img {
+    max-width: 100%;
+    height: 50px;
+}
+
+.contactRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.contactRight {
+    color: black;
+}
+
+.contactRight img {
+    box-shadow: 0px 0px 3px white;
+}
