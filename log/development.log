@@ -394,3 +394,594 @@ Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 5077)
   [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mNote Load (2.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" ORDER BY "notes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mReservation Load (1.8ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" ORDER BY "reservations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2022-05-04 00:34:11 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (Duration: 4.9ms | Allocations: 416)
+  Rendered layout layouts/application.html.erb (Duration: 416.2ms | Allocations: 76091)
+Completed 200 OK in 435ms (Views: 423.2ms | ActiveRecord: 0.0ms | Allocations: 81986)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-04 00:41:16 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 696)
+  Rendered layout layouts/application.html.erb (Duration: 51.1ms | Allocations: 20112)
+Completed 200 OK in 65ms (Views: 59.3ms | ActiveRecord: 0.0ms | Allocations: 24768)
+
+
+Started GET "/css/style.css" for 127.0.0.1 at 2022-05-04 00:41:16 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  
+Started GET "/img/bird.png" for 127.0.0.1 at 2022-05-04 00:41:16 +0200
+Started GET "/img/facebook.png" for 127.0.0.1 at 2022-05-04 00:41:16 +0200
+Started GET "/img/calendar.png" for 127.0.0.1 at 2022-05-04 00:41:16 +0200
+Started GET "/img/twitter.png" for 127.0.0.1 at 2022-05-04 00:41:16 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/calendar.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/bird.png"):
+  
+Started GET "/img/instagram.png" for 127.0.0.1 at 2022-05-04 00:41:17 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/twitter.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/facebook.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/instagram.png"):
+  
+Started GET "/img/enclosure.jpg" for 127.0.0.1 at 2022-05-04 00:41:17 +0200
+Started GET "/img/monky.png" for 127.0.0.1 at 2022-05-04 00:41:17 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/monky.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/enclosure.jpg"):
+  
+Started GET "/img/fox.png" for 127.0.0.1 at 2022-05-04 00:41:17 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/fox.png"):
+  
+Started GET "/img/bear.png" for 127.0.0.1 at 2022-05-04 00:41:17 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/bear.png"):
+  
+Started GET "/img/mapa.png" for 127.0.0.1 at 2022-05-04 00:41:17 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/mapa.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-04 00:41:28 +0200
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1104)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 1347)
+
+
+Started GET "/css/style.css" for 127.0.0.1 at 2022-05-04 00:41:28 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  
+Started GET "/img/enclosure.jpg" for 127.0.0.1 at 2022-05-04 00:41:28 +0200
+Started GET "/img/fox.png" for 127.0.0.1 at 2022-05-04 00:41:28 +0200
+Started GET "/img/monky.png" for 127.0.0.1 at 2022-05-04 00:41:28 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/monky.png"):
+  
+Started GET "/img/bear.png" for 127.0.0.1 at 2022-05-04 00:41:29 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/fox.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/bear.png"):
+  
+Started GET "/img/calendar.png" for 127.0.0.1 at 2022-05-04 00:41:29 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/calendar.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/enclosure.jpg"):
+  
+Started GET "/img/facebook.png" for 127.0.0.1 at 2022-05-04 00:41:29 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/facebook.png"):
+  
+Started GET "/img/twitter.png" for 127.0.0.1 at 2022-05-04 00:41:29 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/twitter.png"):
+  
+Started GET "/img/instagram.png" for 127.0.0.1 at 2022-05-04 00:41:29 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/instagram.png"):
+  
+Started GET "/img/mapa.png" for 127.0.0.1 at 2022-05-04 00:41:29 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/mapa.png"):
+  
+Started GET "/img/bird.png" for 127.0.0.1 at 2022-05-04 00:41:29 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/bird.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-04 00:41:56 +0200
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 507)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1797)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 2685)
+
+
+Started GET "/css/style.css" for 127.0.0.1 at 2022-05-04 00:41:56 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  
+Started GET "/img/enclosure.jpg" for 127.0.0.1 at 2022-05-04 00:41:56 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/enclosure.jpg"):
+  
+Started GET "/img/monky.png" for 127.0.0.1 at 2022-05-04 00:41:56 +0200
+Started GET "/img/fox.png" for 127.0.0.1 at 2022-05-04 00:41:56 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/monky.png"):
+  
+Started GET "/img/bear.png" for 127.0.0.1 at 2022-05-04 00:41:56 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/bear.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/fox.png"):
+  
+Started GET "/img/bird.png" for 127.0.0.1 at 2022-05-04 00:41:56 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/bird.png"):
+  
+Started GET "/img/facebook.png" for 127.0.0.1 at 2022-05-04 00:41:56 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/facebook.png"):
+  
+Started GET "/img/twitter.png" for 127.0.0.1 at 2022-05-04 00:41:56 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/twitter.png"):
+  
+Started GET "/img/instagram.png" for 127.0.0.1 at 2022-05-04 00:41:56 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/instagram.png"):
+  
+Started GET "/img/mapa.png" for 127.0.0.1 at 2022-05-04 00:41:57 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/mapa.png"):
+  
+Started GET "/img/calendar.png" for 127.0.0.1 at 2022-05-04 00:41:57 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/calendar.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-04 00:43:03 +0200
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 512)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 1803)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 2691)
+
+
+Started GET "/css/style.css" for 127.0.0.1 at 2022-05-04 00:43:03 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  
+Started GET "/app/views/public/img/enclosure.jpg" for 127.0.0.1 at 2022-05-04 00:43:03 +0200
+Started GET "/app/views/public/img/fox.png" for 127.0.0.1 at 2022-05-04 00:43:03 +0200
+Started GET "/app/views/public/img/monky.png" for 127.0.0.1 at 2022-05-04 00:43:03 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/monky.png"):
+  
+Started GET "/app/views/public/img/bear.png" for 127.0.0.1 at 2022-05-04 00:43:03 +0200
+Started GET "/app/views/public/img/bird.png" for 127.0.0.1 at 2022-05-04 00:43:03 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/bear.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/enclosure.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/bird.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/fox.png"):
+  
+Started GET "/app/views/public/img/facebook.png" for 127.0.0.1 at 2022-05-04 00:43:04 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/facebook.png"):
+  
+Started GET "/app/views/public/img/twitter.png" for 127.0.0.1 at 2022-05-04 00:43:04 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/twitter.png"):
+  
+Started GET "/app/views/public/img/instagram.png" for 127.0.0.1 at 2022-05-04 00:43:04 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/instagram.png"):
+  
+Started GET "/app/views/public/img/mapa.png" for 127.0.0.1 at 2022-05-04 00:43:04 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/mapa.png"):
+  
+Started GET "/app/views/public/img/calendar.png" for 127.0.0.1 at 2022-05-04 00:43:04 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/calendar.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-04 00:48:49 +0200
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 506)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 1782)
+Completed 200 OK in 10ms (Views: 8.7ms | Allocations: 2670)
+
+
+Started GET "/css/style.css" for 127.0.0.1 at 2022-05-04 00:48:50 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/css/style.css"):
+  
+Started GET "/app/views/public/img/enclosure.jpg" for 127.0.0.1 at 2022-05-04 00:48:50 +0200
+Started GET "/app/views/public/img/monky.png" for 127.0.0.1 at 2022-05-04 00:48:50 +0200
+Started GET "/app/views/public/img/fox.png" for 127.0.0.1 at 2022-05-04 00:48:50 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/fox.png"):
+  
+Started GET "/app/views/public/img/bear.png" for 127.0.0.1 at 2022-05-04 00:48:50 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/bear.png"):
+  
+Started GET "/app/views/public/img/bird.png" for 127.0.0.1 at 2022-05-04 00:48:50 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/monky.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/bird.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/enclosure.jpg"):
+  
+Started GET "/app/views/public/img/facebook.png" for 127.0.0.1 at 2022-05-04 00:48:50 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/facebook.png"):
+  
+Started GET "/app/views/public/img/twitter.png" for 127.0.0.1 at 2022-05-04 00:48:50 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/twitter.png"):
+  
+Started GET "/app/views/public/img/instagram.png" for 127.0.0.1 at 2022-05-04 00:48:50 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/instagram.png"):
+  
+Started GET "/app/views/public/img/mapa.png" for 127.0.0.1 at 2022-05-04 00:48:50 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/mapa.png"):
+  
+Started GET "/app/views/public/img/calendar.png" for 127.0.0.1 at 2022-05-04 00:48:51 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/calendar.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-04 00:50:29 +0200
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (Duration: 1.7ms | Allocations: 472)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 1758)
+Completed 200 OK in 9ms (Views: 7.6ms | Allocations: 2583)
+
+
+Started GET "/app/views/public/img/enclosure.jpg" for 127.0.0.1 at 2022-05-04 00:50:29 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/enclosure.jpg"):
+  
+Started GET "/app/views/public/img/monky.png" for 127.0.0.1 at 2022-05-04 00:50:29 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/monky.png"):
+  
+Started GET "/app/views/public/img/fox.png" for 127.0.0.1 at 2022-05-04 00:50:29 +0200
+Started GET "/app/views/public/img/bear.png" for 127.0.0.1 at 2022-05-04 00:50:29 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/bear.png"):
+  
+Started GET "/app/views/public/img/bird.png" for 127.0.0.1 at 2022-05-04 00:50:29 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/fox.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/bird.png"):
+  
+Started GET "/app/views/public/img/facebook.png" for 127.0.0.1 at 2022-05-04 00:50:29 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/facebook.png"):
+  
+Started GET "/app/views/public/img/twitter.png" for 127.0.0.1 at 2022-05-04 00:50:29 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/twitter.png"):
+  
+Started GET "/app/views/public/img/instagram.png" for 127.0.0.1 at 2022-05-04 00:50:29 +0200
+Started GET "/app/views/public/img/mapa.png" for 127.0.0.1 at 2022-05-04 00:50:30 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/mapa.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/instagram.png"):
+  
+Started GET "/app/views/public/img/calendar.png" for 127.0.0.1 at 2022-05-04 00:50:30 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/calendar.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-04 00:51:40 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 661)
+  Rendered layout layouts/application.html.erb (Duration: 64.6ms | Allocations: 20083)
+Completed 200 OK in 76ms (Views: 69.3ms | ActiveRecord: 0.0ms | Allocations: 24667)
+
+
+Started GET "/app/views/public/img/enclosure.jpg" for 127.0.0.1 at 2022-05-04 00:51:40 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/enclosure.jpg"):
+  
+Started GET "/app/views/public/img/bear.png" for 127.0.0.1 at 2022-05-04 00:51:40 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/bear.png"):
+  
+Started GET "/app/views/public/img/bird.png" for 127.0.0.1 at 2022-05-04 00:51:40 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/bird.png"):
+  
+Started GET "/app/views/public/img/monky.png" for 127.0.0.1 at 2022-05-04 00:51:40 +0200
+Started GET "/app/views/public/img/fox.png" for 127.0.0.1 at 2022-05-04 00:51:40 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/monky.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/fox.png"):
+  
+Started GET "/app/views/public/img/facebook.png" for 127.0.0.1 at 2022-05-04 00:51:41 +0200
+Started GET "/app/views/public/img/instagram.png" for 127.0.0.1 at 2022-05-04 00:51:41 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/instagram.png"):
+  
+Started GET "/app/views/public/img/twitter.png" for 127.0.0.1 at 2022-05-04 00:51:41 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/facebook.png"):
+  
+Started GET "/app/views/public/img/mapa.png" for 127.0.0.1 at 2022-05-04 00:51:41 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/twitter.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/mapa.png"):
+  
+Started GET "/app/views/public/img/calendar.png" for 127.0.0.1 at 2022-05-04 00:51:41 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/calendar.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-04 00:53:49 +0200
+Processing by PublicController#home as HTML
+  Rendering layout layouts/mailer.html.erb
+  Rendering public/home.html.erb within layouts/mailer
+  Rendered public/home.html.erb within layouts/mailer (Duration: 1.6ms | Allocations: 476)
+  Rendered layout layouts/mailer.html.erb (Duration: 2.9ms | Allocations: 706)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 1558)
+
+
+Started GET "/app/views/public/img/enclosure.jpg" for 127.0.0.1 at 2022-05-04 00:53:49 +0200
+Started GET "/app/views/public/img/monky.png" for 127.0.0.1 at 2022-05-04 00:53:49 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/monky.png"):
+  
+Started GET "/app/views/public/img/fox.png" for 127.0.0.1 at 2022-05-04 00:53:49 +0200
+Started GET "/app/views/public/img/bear.png" for 127.0.0.1 at 2022-05-04 00:53:49 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/bear.png"):
+  
+Started GET "/app/views/public/img/bird.png" for 127.0.0.1 at 2022-05-04 00:53:49 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/fox.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/enclosure.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/bird.png"):
+  
+Started GET "/app/views/public/img/facebook.png" for 127.0.0.1 at 2022-05-04 00:53:49 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/facebook.png"):
+  
+Started GET "/app/views/public/img/twitter.png" for 127.0.0.1 at 2022-05-04 00:53:49 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/twitter.png"):
+  
+Started GET "/app/views/public/img/instagram.png" for 127.0.0.1 at 2022-05-04 00:53:49 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/instagram.png"):
+  
+Started GET "/app/views/public/img/mapa.png" for 127.0.0.1 at 2022-05-04 00:53:49 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/mapa.png"):
+  
+Started GET "/app/views/public/img/calendar.png" for 127.0.0.1 at 2022-05-04 00:53:50 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/calendar.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-04 00:57:04 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (Duration: 217.9ms | Allocations: 33489)
+  Rendered layout layouts/application.html.erb (Duration: 226.3ms | Allocations: 34776)
+Completed 200 OK in 238ms (Views: 231.1ms | ActiveRecord: 0.0ms | Allocations: 39359)
+
+
+Started GET "/app/views/public/img/enclosure.jpg" for 127.0.0.1 at 2022-05-04 00:57:04 +0200
+Started GET "/app/views/public/img/bear.png" for 127.0.0.1 at 2022-05-04 00:57:04 +0200
+Started GET "/app/views/public/img/monky.png" for 127.0.0.1 at 2022-05-04 00:57:04 +0200
+Started GET "/app/views/public/img/fox.png" for 127.0.0.1 at 2022-05-04 00:57:04 +0200
+Started GET "/app/views/public/img/bird.png" for 127.0.0.1 at 2022-05-04 00:57:04 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/monky.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/bird.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/fox.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/enclosure.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/bear.png"):
+  
+Started GET "/app/views/public/img/twitter.png" for 127.0.0.1 at 2022-05-04 00:57:05 +0200
+Started GET "/app/views/public/img/facebook.png" for 127.0.0.1 at 2022-05-04 00:57:05 +0200
+Started GET "/app/views/public/img/instagram.png" for 127.0.0.1 at 2022-05-04 00:57:05 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/instagram.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/facebook.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/twitter.png"):
+  
+Started GET "/app/views/public/img/calendar.png" for 127.0.0.1 at 2022-05-04 00:57:05 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/views/public/img/calendar.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-04 00:59:18 +0200
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+Started GET "/" for 127.0.0.1 at 2022-05-04 00:59:26 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+Started GET "/" for 127.0.0.1 at 2022-05-04 00:59:44 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+Started GET "/" for 127.0.0.1 at 2022-05-04 01:00:02 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+Started GET "/" for 127.0.0.1 at 2022-05-04 01:00:34 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (Duration: 46.8ms | Allocations: 27359)
+  Rendered layout layouts/application.html.erb (Duration: 54.6ms | Allocations: 28640)
+Completed 200 OK in 65ms (Views: 58.0ms | ActiveRecord: 0.0ms | Allocations: 33224)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-04 01:03:08 +0200
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (Duration: 12.7ms | Allocations: 5145)
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 10367)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.0ms | Allocations: 11188)
+
+
+Started GET "/img/panda_czerwona.png" for 127.0.0.1 at 2022-05-04 01:03:08 +0200
+Started GET "/img/monki.png" for 127.0.0.1 at 2022-05-04 01:03:08 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/img/monki.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/panda_czerwona.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-04 01:03:59 +0200
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (Duration: 16.7ms | Allocations: 4548)
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 8917)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms | Allocations: 9142)
+
+
+Started GET "/images/panda_czerwona.png" for 127.0.0.1 at 2022-05-04 01:04:00 +0200
+Started GET "/images/monki.png" for 127.0.0.1 at 2022-05-04 01:04:00 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/monki.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/images/panda_czerwona.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-04 01:05:42 +0200
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (Duration: 13.6ms | Allocations: 5638)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 6845)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 7667)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-04 01:06:01 +0200
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (Duration: 17.1ms | Allocations: 5595)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 6806)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.0ms | Allocations: 7623)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-04 01:06:02 +0200
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (Duration: 9.6ms | Allocations: 4968)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 5990)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 6213)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-04 01:07:01 +0200
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (Duration: 17.0ms | Allocations: 5146)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 9210)
+Completed 200 OK in 36ms (Views: 34.4ms | Allocations: 10028)
+
+
+Started GET "/images/panda_czerwona.png" for 127.0.0.1 at 2022-05-04 01:07:02 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/images/panda_czerwona.png"):
+  
+Started GET "/" for 127.0.0.1 at 2022-05-04 01:07:22 +0200
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (Duration: 9.0ms | Allocations: 4549)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 7266)
+Completed 200 OK in 21ms (Views: 20.6ms | Allocations: 7488)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-04 01:09:20 +0200
+Processing by PublicController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/home.html.erb within layouts/application
+  Rendered public/home.html.erb within layouts/application (Duration: 9.2ms | Allocations: 4528)
+  Rendered layout layouts/application.html.erb (Duration: 40.8ms | Allocations: 15071)
+Completed 200 OK in 42ms (Views: 41.7ms | Allocations: 15291)
+
+
