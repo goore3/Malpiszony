@@ -13,16 +13,66 @@
     <div id="menu-container">
         <div id="top-bar">
             <div class="user-box">
-                <div class="usr-img"></div>
-                <div class="usr-text">
-                    Witaj użytkowniku
+                <div class="user-img"></div>
+                <div class="user-text">
+                    Witaj użytkowniku<br>
+                    xPeaker
                 </div>
+                <div class="user-dummy"></div>
             </div>
             <div class="info-box">
+                <div class=info-text>
+                    Strona administracyjna Pazurek
+                </div>
+                <div class=info-logo>
+                    <%= image_tag "monki.png"%>
+                </div>
             </div>
         </div>
         <div id="main-content">
-            <div id=hor-nav-bar>
+            <div id="admin-nav-bar">
+                <div class="nav-bar-elem">
+                    <div class="nav-icon">
+                    </div>
+                    <div class="nav-text">
+                        Strona główna
+                    </div>
+                </div>
+                <div class="nav-bar-elem">
+                    <div class="nav-icon">
+                    </div>
+                    <div class="nav-text">
+                        Zwierzęta
+                    </div>
+                </div>
+                <div class="nav-bar-elem">
+                    <div class="nav-icon">
+                    </div>
+                    <div class="nav-text">
+                        Wybiegi
+                    </div>
+                </div>
+                <div class="nav-bar-elem">
+                    <div class="nav-icon">
+                    </div>
+                    <div class="nav-text">
+                        Pracownicy
+                    </div>
+                </div>
+                <div class="nav-bar-elem">
+                    <div class="nav-icon">
+                    </div>
+                    <div class="nav-text">
+                        Wydarzenia
+                    </div>
+                </div>
+                <div class="nav-bar-elem">
+                    <div class="nav-icon">
+                    </div>
+                    <div class="nav-text">
+                        Rezerwacje
+                    </div>
+                </div>
             </div>
             <div>
                 <%= yield %>

@@ -1,11 +1,99 @@
-#menu-container {
+body {
+    margin: 0;
+    font-family: merriweather, serif;
+    font-weight: 300;
+    font-style: normal;
 
+}
+
+#menu-container {
+    display: flex;
+    flex-direction: column;
 }
 
 #top-bar {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    background-image: url("panda_czerwona.png");
+    background-size: cover;
+    background-position: center;
 }
+
+.user-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #296D8A;
+}
+
+.user-img { 
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.user-text {
+    background-color:rgba(196,196,196,0.14);
+    color: white;
+    padding: 5px;
+}
+
+.user-dummy {
+    width: 40px;
+}
+
+.info-box {
+    display: flex;
+    margin-left: auto;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.info-logo img {
+    height: 100px;
+}
+
+.info-text {
+    color:white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+#main-content {
+    display: flex;
+    flex-direction: row;
+}
+
+#admin-nav-bar {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+    background-color: #B5DADC;
+    height: 90vh;
+    box-shadow: 1px 0px 6px gray;
+}
+
+.nav-bar-elem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.nav-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+/* Strona wyświetlająca zwierzęta */
 
 .item-list {
     display:flex;
