@@ -93,6 +93,13 @@ body {
     background-color: grey;
 }
 
+#yield-content {
+    width: 70%;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Strona wyświetlająca zwierzęta */
 
 .item-list {
