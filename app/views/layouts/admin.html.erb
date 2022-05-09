@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin site</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'admin', media: 'all', "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    <div id="menu-container">
+        <div id="top-bar">
+            <div class="user-box">
+                <div class="usr-img"></div>
+                <div class="usr-text">
+                    Witaj użytkowniku
+                </div>
+            </div>
+            <div class="info-box">
+            </div>
+        </div>
+        <div id="main-content">
+            <div id=hor-nav-bar>
+            </div>
+            <div>
+                <%= yield %>
+            </div>
+        <div>
+    </div>
+  </body>   
+</html>

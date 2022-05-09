@@ -1,0 +1,11 @@
+<h1>Nasze zwierzątka</h1>
+<div class="item-list">
+<% @animals.each do |animal| %>
+        <div class="item-element">
+            <p><%=animal.name%></p>
+            <p><%=animal.species%></p>
+            <p><%=animal.age%></p>
+            <p><%=animal.description%></p>
+        </div>
+<% end %>
+<div>

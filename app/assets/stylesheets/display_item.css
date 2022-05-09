@@ -1,0 +1,13 @@
+.item-list {
+    display:flex;
+    flex-direction: column;
+}
+
+.item-element {
+    display:flex;
+    flex-direction: row;
+    border: 1px solid black;    
+}
+.item-element p {
+    margin: 5px;
+}
