@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+1.upto(5) do |i|
+    Animal.create(name: "Zwierze#{i}", species:"Gatunek", age:4, enclosure_id:1, created_at: Time.now, updated_at: Time.now)
+end
