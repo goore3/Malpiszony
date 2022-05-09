@@ -1,0 +1,14 @@
+<h1><%= @animals.name %></h1>
+<ul>
+    <li>
+        Nazwa: <%= @animals.name %>
+    </li>
+    <li>
+        Gatunek: <%= @animals.species %>
+    </li>
+    <li>
+        Wiek: <%= @animals.age %>
+    </li>
+    <li> <%= link_to "Delete", @animals, method: :delete, data: { confirm: "Really?" } %></li>
+</ul>
+<p><%= @animals.description %></p>

@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "public#home"
-  get '/animals', to: "animals#index"
+  #get '/animals', to: "animals#index"
+  resources :animals
 end
