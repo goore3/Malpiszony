@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+*= require simple_calendar
 
  body {
     margin: 0;
@@ -29,7 +30,7 @@
 
 #headerContainer {
     width: 100%;
-    background-image: url(<%= asset_path("panda_czerwona.png") %>);
+    background-image: url("panda_czerwona.png");
     background-position: center;
     background-size: cover;
 }
@@ -50,7 +51,7 @@
 .logo {
     width: 100px;
     height: 100px;
-    background-image: url(<%=asset_path("monki.png")%>);
+    background-image: url("monki.png");
     background-size: cover;
     background-position: center;
     justify-self: start;
