@@ -173,6 +173,33 @@ h3 {
     color: white;
 }
 
+#events_calendar{
+    background-color: white;
+    border-radius: 2%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.simple-calendar{
+    margin: 50px;
+}
+
+.calendar-title {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.calendar-heading {
+    margin-bottom: 10px;
+}
+
+.simple-calendar th,td {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+}
+
+
 #reservationContainer {
     display: flex;
     flex-direction: row;
