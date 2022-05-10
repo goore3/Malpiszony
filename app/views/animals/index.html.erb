@@ -16,7 +16,7 @@
         <th scope="row"><%=animal.id%></th>
         <td><%=animal.name%></td>
         <td><%=animal.species%></td>
-        <td><%= link_to "Usuń", animal, method: :delete %></td>
+        <td><%= button_to "Usuń", animal_path(animal), class: "btn btn-danger", form: { data: { turbo_confirm: "Czy na pewno?" } }, method: :delete%></td>
         <td><a href="<%= edit_animal_path(animal) %>" type="a" class="btn btn-warning">Edytuj</a></td>
         <td><a href="<%= animal_path(animal) %>" type="a" class="btn btn-info">Szczegóły</a></td>
       </tr>

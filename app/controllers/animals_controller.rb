@@ -38,7 +38,7 @@ class AnimalsController < ApplicationController
     @animals = Animal.find(params[:id])
     @animals.destroy
 
-    redirect_to "/articles/", status: :see_other
+    redirect_to "/animals/", status: :see_other
   end
 
   private
