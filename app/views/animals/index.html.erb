@@ -12,14 +12,15 @@
   </thead>
   <tbody>
     <% @animals.each do |animal| %>
-    <tr>
-      <th scope="row"><%=animal.id%></th>
-      <td><%=animal.name%></td>
-      <td><%=animal.species%></td>
-      <td><a type="a" class="btn btn-danger">Usuń</a></td>
-      <td><a type="a" class="btn btn-warning">Edytuj</a></td>
-      <td><a type="a" class="btn btn-info">Szczegóły</a></td>
-    </tr>
+      <tr>
+        <th scope="row"><%=animal.id%></th>
+        <td><%=animal.name%></td>
+        <td><%=animal.species%></td>
+        <td><%= button_to "Usuń", animal_path(animal), class: "btn btn-danger", form: { data: { turbo_confirm: "Czy na pewno?" } }, method: :delete%></td>
+        <td><a href="<%= edit_animal_path(animal) %>" type="a" class="btn btn-warning">Edytuj</a></td>
+        <td><a href="<%= animal_path(animal) %>" type="a" class="btn btn-info">Szczegóły</a></td>
+      </tr>
     <% end %>
   </tbody>
 </table>
+<%= link_to "+", new_animal_path, class: "btn btn-success"%>
