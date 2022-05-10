@@ -65,7 +65,9 @@
             <div class="breakLine"></div>
             <div id="eventContainer">
                 <h2>Nasze Wydarzenia</h2>
-                <%= image_tag "calendar.png"%>
+                <div id="events_calendar">
+                    <%= render partial: "calendar" %>
+                </div>
             </div>
             <div id="reservationContainer">
                 <div class="leftContainer">

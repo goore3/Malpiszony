@@ -1,11 +1,26 @@
 <h1>Nasze zwierzątka</h1>
-<div class="item-list">
-<% @animals.each do |animal| %>
-        <div class="item-element">
-            <p><%=animal.name%></p>
-            <p><%=animal.species%></p>
-            <p><%=animal.age%></p>
-            <p><%=animal.description%></p>
-        </div>
-<% end %>
-<div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nazwa</th>
+      <th scope="col">Gatunek</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @animals.each do |animal| %>
+      <tr>
+        <th scope="row"><%=animal.id%></th>
+        <td><%=animal.name%></td>
+        <td><%=animal.species%></td>
+        <td><%= button_to "Usuń", animal_path(animal), class: "btn btn-danger", form: { data: { turbo_confirm: "Czy na pewno?" } }, method: :delete%></td>
+        <td><a href="<%= edit_animal_path(animal) %>" type="a" class="btn btn-warning">Edytuj</a></td>
+        <td><a href="<%= animal_path(animal) %>" type="a" class="btn btn-info">Szczegóły</a></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to "+", new_animal_path, class: "btn btn-success"%>

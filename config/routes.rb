@@ -5,6 +5,6 @@ Rails.application.routes.draw do
     get "/employees/sign_out" => "devise/sessions#destroy"     
   end
   # Defines the root path route ("/")
-  root to: "public#home"
-  get '/animals', to: "animals#index"
+  root "public#home"
+  resources :animals
 end
