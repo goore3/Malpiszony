@@ -11,6 +11,10 @@
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <% if employee_signed_in? %>
+    <%= link_to 'Sign out', destroy_employee_session_path, method: :delete %>
     <div id="menu-container">
         <div id="top-bar">
             <div class="user-box">
@@ -75,10 +79,15 @@
                     </div>
                 </div>
             </div>
+                
             <div id="yield-content">
                 <%= yield %>
+
             </div>
-        <div>
     </div>
+    <% else %>
+      <%= link_to 'Log in', sign_in_employee_session_path %>
+    <% end %>
+    <%= yield %>
   </body>   
 </html>
