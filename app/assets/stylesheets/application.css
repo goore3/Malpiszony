@@ -15,11 +15,30 @@
  */
 *= require simple_calendar
 
- body {
+body {
     margin: 0;
     font-family: merriweather, serif;
     font-weight: 300;
     font-style: normal;
+}
+
+#login-information {
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    align-items: center;
+    color: white;
+}
+
+.notice {
+    margin: 0;
+    padding: 0;
+}
+
+.alert {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 #main_container {

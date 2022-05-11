@@ -6,6 +6,25 @@ body {
 
 }
 
+#login-information {
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    align-items: center;
+    color: white;
+}
+
+.notice {
+    margin: 0;
+    padding: 0;
+}
+
+.alert {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 #menu-container {
     display: flex;
     flex-direction: column;
@@ -94,9 +113,10 @@ body {
 }
 
 #yield-content {
-    width: 70%;
-    margin-left: 10px;
-    margin-top: 10px;
+    width: 100%;
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-right: 25px;
     font-family: Arial, Helvetica, sans-serif;
 }
 

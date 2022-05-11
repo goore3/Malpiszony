@@ -11,17 +11,21 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div id="login-information">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
     <% if employee_signed_in? %>
-    <%= link_to 'Sign out', destroy_employee_session_path, method: :delete %>
     <div id="menu-container">
         <div id="top-bar">
             <div class="user-box">
                 <div class="user-img"></div>
-                <div class="user-text">
-                    Witaj użytkowniku<br>
-                    xPeaker
+                <div class="login-box">
+                    <div class="user-text">
+                        Witaj użytkowniku<br>
+                        <%= current_employee.first_name %>
+                    </div>
+                    <%= link_to 'Sign out', destroy_employee_session_path, method: :delete %>
                 </div>
                 <div class="user-dummy"></div>
             </div>
