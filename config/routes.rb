@@ -12,4 +12,9 @@ Rails.application.routes.draw do
   end
 
   resources :reservations, only: :new
+
+  #dunno about the scope thing
+  resources :enclosures 
+  resources :animals
+
 end
