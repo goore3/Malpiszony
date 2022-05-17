@@ -13,4 +13,4 @@
         Numer wybiegu: <%= @events.enclosure_id %>
     </li>
 </ul>
-<td><a href="/events/" type="a" class="btn btn-info">Powrót</a></td>
+<td><%= link_to "Powrót", admin_events_url, class: "btn btn-info"%></td>

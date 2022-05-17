@@ -42,7 +42,7 @@ class ReservationsController < ApplicationController
       @reservations = Reservation.find(params[:id])
       @reservations.destroy
   
-      redirect_to "/reservations/", status: :see_other
+      redirect_to "admin/reservations/", status: :see_other
     end
   
     private

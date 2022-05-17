@@ -1,4 +1,4 @@
-<%= form_with model: animals do |form| %>
+<%= form_with model: [:admin, animals] do |form| %>
     <div>
         <%= form.label :nazwa %><br>
         <%= form.text_field :name %>

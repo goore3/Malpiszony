@@ -16,11 +16,11 @@
         <th scope="row"><%=event.id%></th>
         <td><%=event.name%></td>
         <td><%=event.enclosure_id%></td>
-        <td><%= button_to "Usuń", event_path(event), class: "btn btn-danger", form: { data: { turbo_confirm: "Czy na pewno?" } }, method: :delete%></td>
-        <td><a href="<%= edit_event_path(event) %>" type="a" class="btn btn-warning">Edytuj</a></td>
-        <td><a href="<%= event_path(event) %>" type="a" class="btn btn-info">Szczegóły</a></td>
+        <td><%= button_to "Usuń", admin_event_path(event), class: "btn btn-danger", form: { data: { turbo_confirm: "Czy na pewno?" } }, method: :delete%></td>
+        <td><a href="<%= edit_admin_event_path(event) %>" type="a" class="btn btn-warning">Edytuj</a></td>
+        <td><a href="<%= admin_animals_url(event) %>" type="a" class="btn btn-info">Szczegóły</a></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= link_to "+", new_event_path, class: "btn btn-success"%>
+<%= link_to "+", new_admin_event_path, class: "btn btn-success"%>

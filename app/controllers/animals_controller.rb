@@ -2,7 +2,7 @@ class AnimalsController < ApplicationController
   layout 'admin'
   before_action :authenticate_employee!
   def index
-    @animals = Animal.all
+    @animals = Animal.all.order("id")
   end
   def show
     @animals = Animal.find(params[:id])
@@ -31,7 +31,7 @@ class AnimalsController < ApplicationController
     @animals = Animal.find(params[:id])
 
     if @animals.update(animals_params)
-      redirect_to @animals
+      redirect_to [:admin, @animals]
     else
       render :edit, status: :unprocessable_entity
     end
@@ -41,7 +41,7 @@ class AnimalsController < ApplicationController
     @animals = Animal.find(params[:id])
     @animals.destroy
 
-    redirect_to "/animals/", status: :see_other
+    redirect_to "/admin/animals", status: :see_other
   end
 
   private

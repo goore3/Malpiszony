@@ -11,4 +11,5 @@
     </li>
 </ul>
 <p><%= @animals.description %></p>
-<td><a href="/animals/" type="a" class="btn btn-info">Powrót</a></td>
+
+<td><%= link_to "Powrót", admin_animals_url, class: "btn btn-info"%></td>

@@ -14,7 +14,7 @@ class EventsController < ApplicationController
   
     def create
       @events = Event.new(events_params)
-  
+      @enclosures_ids = Enclosure.all.collect(&:id)
       if @events.save
         redirect_to @events
       else
@@ -29,7 +29,7 @@ class EventsController < ApplicationController
   
     def update
       @events = Event.find(params[:id])
-  
+      @enclosures_ids = Enclosure.all.collect(&:id)
       if @events.update(events_params)
         redirect_to @events
       else
@@ -41,7 +41,7 @@ class EventsController < ApplicationController
       @events = Event.find(params[:id])
       @events.destroy
   
-      redirect_to "/events/", status: :see_other
+      redirect_to "admin/events/", status: :see_other
     end
   
     private
