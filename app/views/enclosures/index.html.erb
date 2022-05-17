@@ -1,0 +1,26 @@
+<h1>Nasze zwierzątka</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nazwa</th>
+      <th scope="col">Gatunek</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @enclosures.each do |enclosure| %>
+      <tr>
+        <th scope="row"><%=enclosure.id%></th>
+        <td><%=enclosure.name%></td>
+        <td><%=enclosure.localization%></td>
+        <td><%= button_to "Usuń", enclosure_path(enclosure), class: "btn btn-danger", form: { data: { turbo_confirm: "Czy na pewno?" } }, method: :delete%></td>
+        <td><a href="<%= edit_enclosure_path(enclosure) %>" type="a" class="btn btn-warning">Edytuj</a></td>
+        <td><a href="<%= enclosure_path(enclosure) %>" type="a" class="btn btn-info">Szczegóły</a></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to "+", new_enclosure_path, class: "btn btn-success"%>
