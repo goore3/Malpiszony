@@ -9,6 +9,9 @@
     <li>
         Wiek: <%= @animals.age %>
     </li>
+    <li>
+        Wybieg: <%= Enclosure.find(@animals.enclosure_id).name %>
+    </li>
 </ul>
 <p><%= @animals.description %></p>
 <td><a href="/animals/" type="a" class="btn btn-info">Powrót</a></td>

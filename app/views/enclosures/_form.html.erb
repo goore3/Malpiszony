@@ -1,0 +1,23 @@
+<%= form_with model: enclosures do |form| %>
+    <div>
+        <%= form.label :nazwa %><br>
+        <%= form.text_field :name %>
+        <% enclosures.errors.full_messages_for(:name).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+    
+    <div>
+        <%= form.label :lokalizacja %><br>
+        <%= form.text_field :localization %>
+        <% enclosures.errors.full_messages_for(:species).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+    
+    <td><a href="/enclosures/" type="a" class="btn btn-info">Powrót</a></td>
+<% end %>
