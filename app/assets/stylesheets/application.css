@@ -192,15 +192,33 @@ h3 {
     color: white;
 }
 
-#events_calendar{
+#events_calendar {
     background-color: white;
     border-radius: 2%;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
-.simple-calendar{
+
+.simple-calendar {
     margin: 50px;
+}
+
+.simple-calendar a{
+    text-shadow: 0 0;
+    color: #296D8A;
+    font-size: 2rem;
+    margin:10px;
+}
+
+.calendar-content {
+    display: flex; 
+    justify-content: space-between;
+}
+
+.calendar-button-container {
+    background-color: rgba(208, 241, 191, 0.5);
+    border-radius: 50%;
 }
 
 .calendar-title {
@@ -249,6 +267,10 @@ h3 {
     border-radius: 5px;
 }
 
+.ticketContainer:last-child {
+    margin-bottom: 0;
+}
+
 .ticketPrice {
     display: flex;
     align-items: center;
@@ -278,6 +300,15 @@ h3 {
     border-radius: 10px;
 }
 
+.reservationText h2 {
+    margin-top: 50px;
+}
+
+.reservationText div {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
 .reservationButton {
     display: flex;
     align-items: center;
@@ -294,6 +325,7 @@ h3 {
     font-size: 1.2rem;
     font-family: 'merriweather';
     font-weight: 900;
+    margin-bottom: 50px;
 }
 
 #contactContainer {
@@ -417,12 +449,11 @@ h3 {
     justify-content: center;
     align-items: center;
     width: 40%;
-}
-
-.contactRight {
     color: black;
 }
 
 .contactRight img {
     box-shadow: 0px 0px 3px white;
+    max-width: 100%;
+    height: auto;
 }
