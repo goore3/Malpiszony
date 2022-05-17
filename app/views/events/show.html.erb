@@ -1,0 +1,16 @@
+<h1><%= @events.name %></h1>
+<ul>
+    <li>
+        Nazwa: <%= @events.name %>
+    </li>
+    <li>
+        Data rozpoczęcia: <%= @events.start_time %>
+    </li>
+    <li>
+        Data zakończenia: <%= @events.end_time %>
+    </li>
+    <li>
+        Numer wybiegu: <%= @events.enclosure_id %>
+    </li>
+</ul>
+<td><a href="/events/" type="a" class="btn btn-info">Powrót</a></td>

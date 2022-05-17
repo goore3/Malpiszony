@@ -1,0 +1,22 @@
+<h1><%= @reservations.id %></h1>
+<ul>
+    <li>
+        Imie: <%= @reservations.first_name %>
+    </li>
+    <li>
+        Nazwisko: <%= @reservations.last_name %>
+    </li>
+    <li>
+        Numer kontaktowy: <%= @reservations.phone %>
+    </li>
+    <li>
+        Adres e-mail: <%= @reservations.email %>
+    </li>
+    <li>
+        Numer wydarzenia: <%= @reservations.event_id %>
+    </li>
+    <li>
+        Nazwa wydarzenia: <%= @event_name %>
+    </li>
+</ul>
+<td><a href="/reservations/" type="a" class="btn btn-info">Powrót</a></td>

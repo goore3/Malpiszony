@@ -1,0 +1,37 @@
+<%= form_with model: events do |form| %>
+    <div>
+        <%= form.label :nazwa %><br>
+        <%= form.text_field :name %>
+        <% events.errors.full_messages_for(:name).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+    
+    <div>
+        <%= form.label :gatunek %><br>
+        <%= form.date_field :start_time %>
+        <% events.errors.full_messages_for(:start_time).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.label :wiek %><br>
+        <%= form.date_field :end_time %>
+        <% events.errors.full_messages_for(:end_time).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.label :wybieg %><br>
+        <%= form.select :enclosure_id, @enclosures_ids %>
+        <% events.errors.full_messages_for(:enclosure_id).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>

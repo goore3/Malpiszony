@@ -25,7 +25,7 @@
 
     <div>
         <%= form.label :wybieg %><br>
-        <%= form.text_field :enclosure_id %>
+        <%= form.select :enclosure_id, @enclosures_ids %>
         <% animals.errors.full_messages_for(:enclosure_id).each do |message| %>
             <div><%= message %></div>
         <% end %>

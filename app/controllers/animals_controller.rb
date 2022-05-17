@@ -9,6 +9,7 @@ class AnimalsController < ApplicationController
   end
   def new
     @animals = Animal.new
+    @enclosures_ids = Enclosure.all.collect(&:id)
   end
 
   def create
@@ -23,6 +24,7 @@ class AnimalsController < ApplicationController
   
   def edit
     @animals = Animal.find(params[:id])
+    @enclosures_ids = Enclosure.all.collect(&:id)
   end
 
   def update

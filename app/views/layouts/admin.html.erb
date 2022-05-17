@@ -72,21 +72,20 @@
                     <div class="nav-icon">
                     </div>
                     <div class="nav-text">
-                        Wydarzenia
+                        <%= link_to 'Wydarzenia', events_url %>
                     </div>
                 </div>
                 <div class="nav-bar-elem">
                     <div class="nav-icon">
                     </div>
                     <div class="nav-text">
-                        Rezerwacje
+                        <%= link_to 'Rezerwacje', reservations_url %>
                     </div>
                 </div>
             </div>
                 
             <div id="yield-content">
                 <%= yield %>
-
             </div>
     </div>
     <% else %>

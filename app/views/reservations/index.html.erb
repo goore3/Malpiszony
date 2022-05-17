@@ -1,0 +1,27 @@
+<h1>Wydarzenia</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Imie</th>
+      <th scope="col">Nazwisko</th>
+      <th scope="col">Nr wydarzenia</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @reservations.each do |reservation| %>
+      <tr>
+        <th scope="row"><%=reservation.id%></th>
+        <td><%=reservation.first_name%></td>
+        <td><%=reservation.last_name%></td>
+        <td><%=reservation.event_id%></td>
+        <td><%= button_to "Usuń", reservation_path(reservation), class: "btn btn-danger", form: { data: { turbo_confirm: "Czy na pewno?" } }, method: :delete%></td>
+        <td><a href="<%= edit_reservation_path(reservation) %>" type="a" class="btn btn-warning">Edytuj</a></td>
+        <td><a href="<%= reservation_path(reservation) %>" type="a" class="btn btn-info">Szczegóły</a></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to "+", new_reservation_path, class: "btn btn-success"%>
