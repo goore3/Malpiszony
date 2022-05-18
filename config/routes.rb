@@ -8,13 +8,8 @@ Rails.application.routes.draw do
   root "public#home"
 
   scope 'admin', as: 'admin' do
-    resources :reservations, :events, :animals
+    resources :reservations, :events, :animals, :enclosures
   end
 
   resources :reservations, only: :new
-
-  #dunno about the scope thing
-  resources :enclosures 
-  resources :animals
-
 end

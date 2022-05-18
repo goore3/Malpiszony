@@ -15,7 +15,7 @@ class EnclosuresController < ApplicationController
     @enclosures = Enclosure.new(enclosures_params)
 
     if @enclosures.save
-      redirect_to @enclosures
+      redirect_to [:admin, @enclosures]
     else
       render :new, status: :unprocessable_entity
     end
@@ -29,7 +29,7 @@ class EnclosuresController < ApplicationController
     @enclosures = Enclosure.find(params[:id])
 
     if @enclosures.update(enclosures_params)
-      redirect_to @enclosures
+      redirect_to [:admin, @enclosures]
     else
       render :edit, status: :unprocessable_entity
     end
@@ -39,7 +39,7 @@ class EnclosuresController < ApplicationController
     @enclosures = Enclosure.find(params[:id])
     @enclosures.destroy
 
-    redirect_to "/enclosures/", status: :see_other
+    redirect_to "/admin/enclosures/", status: :see_other
   end
 
   private

@@ -10,7 +10,7 @@
         Wiek: <%= @animals.age %>
     </li>
     <li>
-        Wybieg: <%= Enclosure.find(@animals.enclosure_id).name %>
+        Wybieg: <%= Enclosure.find(@animals.enclosure_id).name.to_s+"/"+@animals.enclosure_id.to_s %>
     </li>
 </ul>
 <p><%= @animals.description %></p>

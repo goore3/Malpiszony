@@ -25,7 +25,7 @@
 
     <div>
         <%= form.label :wybieg %><br>
-        <%= form.select :enclosure_id, Enclosure.all.collect { |e| [e.name, e.id] }, include_blank: false %>
+        <%= form.select :enclosure_id, Enclosure.all.collect { |e| [e.name.to_s+"/"+e.id.to_s, e.id] }, include_blank: false %>
         <% animals.errors.full_messages_for(:enclosure_id).each do |message| %>
             <div><%= message %></div>
         <% end %>
