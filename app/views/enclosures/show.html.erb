@@ -1,0 +1,22 @@
+<h1><%= @enclosures.name %></h1>
+<ul>
+    <li>
+        Nazwa: <%= @enclosures.name %>
+    </li>
+    <li>
+        Lokalizacja: <%= @enclosures.localization %>
+    </li>
+</ul>
+
+<h2>
+    Zwierzaki na wybiegu
+</h2>
+<ul>
+    <% @enclosures.animals.each do |animal| %>
+    <li>
+        <%=animal.name%>
+    </li>
+    <% end %>
+</ul>
+
+<td><a href="/admin/enclosures/" type="a" class="btn btn-info">Powrót</a></td>

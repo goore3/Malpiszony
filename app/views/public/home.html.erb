@@ -10,7 +10,7 @@
                             <p>Strona Główna</p>
                         </div>
                     </a>
-                    <a href="#animalsContainer">
+                    <a href="#animalsInfo">
                         <div>
                             <p>Nasze zwierzęta</p>
                         </div>
@@ -38,7 +38,9 @@
                 <h2>Zapoznaj się z naturą</h2>
             </div>
         </div>
-        <div class="breakLine"></div>
+        <div id="animalsInfo" class="marquee">
+            <span class="marquee__inner">Żyje u nas <%= Animal.count %> zwierząt na <%= Enclosure.count %> równie atrakcyjnych wybiegach. Zatrudniamy <%= Employee.count %> rzetelnych pracowników.</span>
+        </div>
         <div id="bodyContainer">
             <div id="animalsContainer">
                 <div class="leftPhoto">
