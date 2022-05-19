@@ -1,4 +1,4 @@
-class EventsController < ApplicationController
+class Admin::EventsController < ApplicationController
     layout 'admin'
     before_action :authenticate_employee!
     def index
@@ -16,7 +16,7 @@ class EventsController < ApplicationController
       @events = Event.new(events_params)
       @enclosures_ids = Enclosure.all.collect(&:id)
       if @events.save
-        redirect_to @events
+        redirect_to [:admin, @events]
       else
         render :new, status: :unprocessable_entity
       end
@@ -31,7 +31,7 @@ class EventsController < ApplicationController
       @events = Event.find(params[:id])
       @enclosures_ids = Enclosure.all.collect(&:id)
       if @events.update(events_params)
-        redirect_to @events
+        redirect_to [:admin, @events]
       else
         render :edit, status: :unprocessable_entity
       end
@@ -41,7 +41,7 @@ class EventsController < ApplicationController
       @events = Event.find(params[:id])
       @events.destroy
   
-      redirect_to "admin/events/", status: :see_other
+      redirect_to "/admin/events/", status: :see_other
     end
   
     private

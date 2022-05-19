@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "public#home"
 
-  scope 'admin', as: 'admin' do
+  scope 'admin', module: 'admin', as: 'admin' do
     resources :reservations, :events, :animals
   end
 
-  resources :reservations, only: :new
+  resources :reservations, only: [:new, :create]
 end

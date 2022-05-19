@@ -1,0 +1,22 @@
+<h1>New reservation form <%= @event.name %></h2>
+<%= form_with model: @reservation do |form| %>
+    <div>
+        <%= form.label :first_name %> <br>
+        <%= form.text_field :first_name %>
+    </div>
+    <div>
+        <%= form.label :last_name %> <br>
+        <%= form.text_field :last_name %>
+    </div>
+    <div>
+        <%= form.label :phone %> <br>
+        <%= form.text_field :phone %>
+    </div>
+    <div>
+        <%= form.label :email %> <br>
+        <%= form.text_field :email %>
+    </div>
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>

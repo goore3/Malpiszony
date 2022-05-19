@@ -1,4 +1,4 @@
-class AnimalsController < ApplicationController
+class Admin::AnimalsController < ApplicationController
   layout 'admin'
   before_action :authenticate_employee!
   def index
@@ -16,7 +16,7 @@ class AnimalsController < ApplicationController
     @animals = Animal.new(animals_params)
 
     if @animals.save
-      redirect_to @animals
+      redirect_to [:admin, @animals]
     else
       render :new, status: :unprocessable_entity
     end

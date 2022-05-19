@@ -91,6 +91,12 @@ a {
     margin-right: 5%;
 }
 
+.menu a:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .mainBlock {
     margin-left: 10%;
     margin-top: 300px;
@@ -312,10 +318,14 @@ h3 {
 .reservationButton {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-top: 50px;
 }
 
-.reservationButton button {
+.reservationButton a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 200px;
     height: 50px;
     border: 1px solid black;
@@ -326,6 +336,8 @@ h3 {
     font-family: 'merriweather';
     font-weight: 900;
     margin-bottom: 50px;
+    text-decoration: none;
+    text-shadow: 0 0;
 }
 
 #contactContainer {

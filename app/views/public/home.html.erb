@@ -30,9 +30,7 @@
                             <p>Kontakt</p>
                         </div>
                     </a>
-                    <a>
-                        <%= link_to 'Admin', admin_animals_url %>
-                    </a>
+                    <%= link_to 'Admin', admin_animals_url %>
                 </div>
             </div>
             <div class="mainBlock">
@@ -69,7 +67,7 @@
             <div id="eventContainer">
                 <h2>Nasze Wydarzenia</h2>
                 <div id="events_calendar">
-                    <%= render partial: "calendar" %>
+                    <%= render partial: "calendar", locals: {events: @events} %>
                 </div>
             </div>
             <div id="reservationContainer">
@@ -105,7 +103,7 @@
                         <h2>Rezerwacja blietów</h2>
                         <div>Na co czekasz? Zobacz pokazy naszych uzdolnionych zwierząt!</div>
                         <div class="reservationButton">
-                            <button>Zarezerwuj bilet</button>
+                            <%= link_to 'Zarezerwuj bilet', new_reservation_path %>
                         </div>
                     </div>
                 </div>
