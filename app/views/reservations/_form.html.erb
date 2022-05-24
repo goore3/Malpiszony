@@ -34,9 +34,9 @@
     <div>
         <%= form.label :nr_wydarzenia %><br>
         <% if params[:event_id].presence %>
-            <%= form.select :event_id, @events_ids, selected: params[:event_id] %>
+            <%= form.select :event_id, Event.all.collect {|e| [e.name,e.id]}, selected: params[:event_id], include_blank: false %>
         <% else %>
-            <%= form.select :event_id, @events_ids %>
+            <%= form.select :event_id, Event.all.collect {|e| [e.name,e.id]}, include_blank: false %>
         <% end %>
         <% reservations.errors.full_messages_for(:description).each do |message| %>
             <div><%= message %></div>

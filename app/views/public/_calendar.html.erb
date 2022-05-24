@@ -1,9 +1,28 @@
 <%= month_calendar events: @events do |date,events| %>
-  <%= date.day %>
+  <div class="dayContainer">
+  <div class="dayNumber">
+    <%= date.day %>
+  </div>
   <% events.each do |event| %>
-    <div>
-      <%= event.name %>
-      <%= link_to "Zarezerwuj", new_reservation_path(:event_id => event.id) %>
-    </div>
+      <div class="eventDropdown">
+        <div class="eventHover">
+          <div class="eventName">
+            <%= event.name %>
+          </div>
+          <%= link_to "Zarezerwuj", new_reservation_path(:event_id => event.id) %>
+        </div>
+        <div class="eventDescription">
+          <div>
+            Nazwa wydarzenia: <%= event.name %>
+          </div>
+          <div>
+            Początek wydarzenia: <%= event.start_time %>
+          </div>
+          <div>
+            Koniec wydarzenia: <%= event.end_time %>
+          </div>
+        </div>
+      </div>
   <% end %>
+  </div>
 <%end%>
