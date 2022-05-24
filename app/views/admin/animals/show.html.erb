@@ -15,4 +15,15 @@
 </ul>
 <p><%= @animals.description %></p>
 
+
+<h2>Notatki o zwierzęciu <%= @animals.name %> <h2>
+<ul>
+    <% @notes.each do |note| %>
+        <li>
+            <%= note.content %>
+        </li>
+    <% end %>
+</ul>   
+
+
 <td><%= link_to "Powrót", admin_animals_url, class: "btn btn-info"%></td>

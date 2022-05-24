@@ -6,6 +6,7 @@ class Admin::AnimalsController < ApplicationController
   end
   def show
     @animals = Animal.find(params[:id])
+    @notes = @animals.note
   end
   def new
     @animals = Animal.new
