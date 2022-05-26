@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-1.upto(3) do |i|
-    Employee.create(email: "test#{i}@test.com", password: "testtest", password_confirmation: "testtest")
-end
 1.upto(5) do |i|
-    Animal.create(name: "Zwierze#{i}", species:"Gatunek", age:4, enclosure_id:1, created_at: Time.now, updated_at: Time.now)
+    Employee.create(email: "test#{i}@test.com", password: "testtest", password_confirmation: "testtest")
+    Enclosure.create(localization: "Gdzies Tam", created_at: Time.now, updated_at: Time.now, name: "Wybieg #{i}")
+    Animal.create(name: "Zwierze#{i}", species:"Gatunek", age:4, enclosure_id: i, created_at: Time.now, updated_at: Time.now)
+    Note.create(content: "Notka", employee_id: i, animal_id: i, created_at: Time.now, updated_at: Time.now)
 end
