@@ -1,0 +1,34 @@
+<h1>New reservation form <%= @event.name %></h2>
+<%= form_with model: @reservation do |form| %>
+    <div>
+        <%= form.label :first_name %> <br>
+        <%= form.text_field :first_name %>
+        <%= reservation.errors.full_messages_for(:first_name).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+    <div>
+        <%= form.label :last_name %> <br>
+        <%= form.text_field :last_name %>
+        <%= reservation.errors.full_messages_for(:species).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+    <div>
+        <%= form.label :phone %> <br>
+        <%= form.text_field :phone %>
+        <%= reservation.errors.full_messages_for(:age).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+    <div>
+        <%= form.label :email %> <br>
+        <%= form.text_field :email %>
+        <%= reservation.errors.full_messages_for(:enclosure_id).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>

@@ -1,4 +1,4 @@
-class EnclosuresController < ApplicationController
+class Admin::EnclosuresController < ApplicationController
   layout 'admin'
   before_action :authenticate_employee!
   def index

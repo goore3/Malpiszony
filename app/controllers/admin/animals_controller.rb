@@ -1,4 +1,4 @@
-class AnimalsController < ApplicationController
+class Admin::AnimalsController < ApplicationController
   layout 'admin'
   before_action :authenticate_employee!
   def index
@@ -6,6 +6,7 @@ class AnimalsController < ApplicationController
   end
   def show
     @animals = Animal.find(params[:id])
+    @notes = @animals.note
   end
   def new
     @animals = Animal.new
