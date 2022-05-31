@@ -13,8 +13,9 @@
             <div><%= message %></div>
         <% end %>
     </div>
+    
     <%= form.hidden_field :employee_id, value: current_employee.id %>
-    <%= form.hidden_field :animal_id %>
+    <%= form.hidden_field :animal_id, value: @animal_id %>
 
     <div>
         <%= form.submit %>

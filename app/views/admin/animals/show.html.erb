@@ -25,11 +25,14 @@
         <div class="card-body">
             <h5 class="card-title"><%= note.date %></h5>
             <p class="card-text"><%= note.content %></p>
-            <a href="#" class="btn btn-danger">Usun notke</a>
+            <td><%= button_to "Usuń", admin_animal_note_path(:animal_id => @animals.id, :id => note.id), class: "btn btn-danger", form: { data: { turbo_confirm: "Czy na pewno?" } }, method: :delete%></td>
+            <%= note.id %>
         </div>
         </div>
     </div>
   <% end %>
-<%= link_to "Dodaj notke", new_admin_animal_note_path(@animals), class: "btn btn-success"%>
+</div>
 
-<%= link_to "Powrót", admin_animals_url, class: "btn btn-info"%>
+<td><%= link_to "Dodaj notke", new_admin_animal_note_path(:animal_id => @animals.id), class: "btn btn-success"%></td>
+<td><%= link_to "Powrót", admin_animals_url, class: "btn btn-info"%></td>
+

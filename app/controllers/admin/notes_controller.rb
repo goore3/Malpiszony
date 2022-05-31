@@ -4,16 +4,24 @@ class Admin::NotesController < ApplicationController
 
     def new
       @note = Note.new
+      @animal_id = params[:animal_id]
     end
 
     def create
       @note = Note.new(notes_params)
-      
+      @animal_id = params[:animal_id]
       if @note.save
-        redirect_to [:admin, @animals]
+        redirect_to admin_animal_path(@animal_id)
       else
         render :new, status: :unprocessable_entity
       end
+    end
+
+    def destroy
+      @note = Note.find(params[:id])
+      @note.destroy
+      @animal_id = params[:animal_id]
+      redirect_to admin_animal_path(@animal_id), status: :see_other
     end
 
     private
