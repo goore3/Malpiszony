@@ -17,13 +17,19 @@
 
 
 <h2>Notatki o zwierzęciu <%= @animals.name %> <h2>
-<ul>
-    <% @notes.each do |note| %>
-        <li>
-            <%= note.content %>
-        </li>
-    <% end %>
-</ul>   
 
+<div class="row">
+  <% @notes.each do |note| %>
+    <div class="col-sm-6">
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title"><%= note.date %></h5>
+            <p class="card-text"><%= note.content %></p>
+            <a href="#" class="btn btn-danger">Usun notke</a>
+        </div>
+        </div>
+    </div>
+  <% end %>
+<%= link_to "Dodaj notke", new_admin_animal_note_path(@animals), class: "btn btn-success"%>
 
-<td><%= link_to "Powrót", admin_animals_url, class: "btn btn-info"%></td>
+<%= link_to "Powrót", admin_animals_url, class: "btn btn-info"%>
