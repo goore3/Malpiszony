@@ -1,12 +1,15 @@
 class Admin::EventsController < ApplicationController
     layout 'admin'
     before_action :authenticate_employee!
+
     def index
       @events = Event.all
     end
+
     def show
       @events = Event.find(params[:id])
     end
+    
     def new
       @events = Event.new
       @enclosures_ids = Enclosure.all.collect(&:id)

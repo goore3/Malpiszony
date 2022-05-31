@@ -1,12 +1,15 @@
 class Admin::EnclosuresController < ApplicationController
   layout 'admin'
   before_action :authenticate_employee!
+  
   def index
     @enclosures = Enclosure.all
   end
+
   def show
     @enclosures = Enclosure.find(params[:id])
   end
+
   def new
     @enclosures = Enclosure.new
   end
