@@ -5,6 +5,7 @@ class Admin::NotesController < ApplicationController
     def new
       @note = Note.new
       @animal_id = params[:animal_id]
+      @animal = Animal.find(@animal_id)
     end
 
     def create
