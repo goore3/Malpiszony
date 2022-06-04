@@ -47,6 +47,6 @@ class Admin::EnclosuresController < ApplicationController
 
   private
     def enclosures_params
-      params.require(:enclosure).permit(:localization, :name)
+      params.require(:enclosure).permit(:localization, :name, employee_ids:[])
     end
 end

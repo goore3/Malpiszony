@@ -16,6 +16,10 @@
     </div>
 
     <div>
+        <%= form.collection_check_boxes :employee_ids, Employee.all, :id, :email %>
+    </div>
+
+    <div>
         <%= form.submit %>
     </div>
     
