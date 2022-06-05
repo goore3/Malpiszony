@@ -136,3 +136,19 @@ body {
     margin: 5px;
 }
 
+/* Dashboard */
+
+.info-block-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-block {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px black;
+    margin: 10px;
+}
+.info-block h1,h3 {
+    margin: 10px;
+}

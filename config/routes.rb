@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   scope 'admin', module: 'admin', as: 'admin' do
     resources :reservations, :events, :enclosures
+    resources :dashboard, only: [:index]
     resources :animals do
       resources :notes, except: [:index]
     end
