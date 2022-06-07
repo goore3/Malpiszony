@@ -23,7 +23,14 @@
         <h1><%= @events.where("start_time > ?",Date.today.to_s).count %>
         <h3>Przyszłych wydarzeń</h3>
     </div>
+
 </div>
+
 <div class="charts-container">
-    <%= pie_chart @reservations.group("event").count%>
+    <div id="incoming_chart">
+        <%= pie_chart getEventHash(1), title: "Rezerwacje na nadchodzące wydarzenia" %>
+    </div>
+    <div id="this_month_chart">
+        <%= pie_chart getEventHash(2), title: "Rezerwacje na wydarzenia w tym miesiącu" %>
+    </div>
 </div>

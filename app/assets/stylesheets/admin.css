@@ -152,3 +152,10 @@ body {
 .info-block h1,h3 {
     margin: 10px;
 }
+
+.charts-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
