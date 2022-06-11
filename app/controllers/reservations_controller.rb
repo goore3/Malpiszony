@@ -9,6 +9,7 @@ class ReservationsController < ApplicationController
       @reservations = Reservation.new(reservations_params)
       @events_ids = Event.all.collect(&:id)
       if @reservations.save
+        ReservationMailer.with(reservation: @reservations).new_reservation_email.deliver_later
         redirect_to root_path
       else
         render :new, status: :unprocessable_entity
