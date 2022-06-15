@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
-    layout 'application'
+    layout 'reservation'
     def new
       @reservations = Reservation.new
       @events_ids = Event.all.collect(&:id)

@@ -9,7 +9,11 @@
           <div class="eventName">
             <%= event.name %>
           </div>
-          <%= link_to "Zarezerwuj", new_reservation_path(:event_id => event.id) %>
+          <% if event.is_incoming %>
+            <%= link_to "Zarezerwuj", new_reservation_path(:event_id => event.id) %>
+          <% else %>
+            <div class="eventNotif">Wydarzenie zakończone</div>
+          <% end %>
         </div>
         <div class="eventDescription">
           <div>

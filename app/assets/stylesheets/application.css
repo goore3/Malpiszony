@@ -291,6 +291,13 @@ h3 {
     margin:10px;
 }
 
+.eventHover .eventNotif {
+    text-shadow: 0 0;
+    color: #5a7581;
+    font-size: 0.9rem;
+    margin:5px 10px 10px 10px;
+}
+
 .simple-calendar table {
     border-collapse: collapse;
 }
@@ -573,20 +580,20 @@ h3 {
     background-color: #30362f;
     color: whitesmoke;
     font-size: x-large;
-  }
-  
-  .marquee__inner {
+}
+
+.marquee__inner {
     white-space: nowrap;
     display: inline-block;
     /* Some browsers may require -webkit-animation */
     animation: scroll 20s linear infinite;
     margin-top: 5px;
     margin-bottom: 5px;
-  }
-  
-  /* Creates two white-to-transparent gradients at the ends of the marquee */
-  .marquee::before,
-  .marquee::after {
+}
+
+/* Creates two white-to-transparent gradients at the ends of the marquee */
+.marquee::before,
+.marquee::after {
     z-index: 1;
     top: 0;
     left: 0;
@@ -596,30 +603,35 @@ h3 {
     content: "";
     display: block;
     background: linear-gradient(to right, #30362f, transparent);
-  }
-  
-  .marquee::after {
+}
+
+.marquee::after {
     left: auto;
     right: 0;
     transform: rotate(180deg);
-  }
-  
-  /* Pauses the animations when we hover the marquee */
-  .marquee:hover,
-  .marquee:hover .marquee__inner {
-    /* Some browsers may require -webkit-animation-play-state */
+}
+
+/* Pauses the animations when we hover the marquee */
+.marquee:hover,
+.marquee:hover .marquee__inner {
+/* Some browsers may require -webkit-animation-play-state */
     animation-play-state: paused;
-  }
-  
-  /* Some browsers may require @-webkit-keyframes */
-  @keyframes reduce {
-    to {
-      padding-left: 0;
-    }
-  }
-  
-  @keyframes scroll {
-    to {
-      transform: translateX(-100%);
-    }
-  }
+}
+
+/* Some browsers may require @-webkit-keyframes */
+@keyframes reduce {
+to {
+    padding-left: 0;
+}
+}
+
+@keyframes scroll {
+to {
+    transform: translateX(-100%);
+}
+}
+
+#map {
+    height: 100%;
+}
+
