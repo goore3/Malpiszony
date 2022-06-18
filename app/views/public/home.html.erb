@@ -150,56 +150,29 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="informationForm">
-                            <h2>Masz pytanie? Zadaj je!</h2>
-                            <form>
-                                <label>Imie i nazwisko</label>
-                                <input type="text">
-                                <label>Email kontaktowy</label>
-                                <input type="email">
-                                <label>Wiadomośc</label>
-                                <input type="text">
-                                <div class="formButton">
-                                    <button type="submit">
-                                        Wyślij wiadomość
-                                    </button>
-                                </div>
-                            </form>
-                            <div class="logos">
-                                <a href="facebook.com">
-                                    <div class="logoImage">
-                                        <%= image_tag "facebook.png"%>
-                                    </div>
-                                </a>
-                                <a href="twitter.com">
-                                    <div class="logoImage">
-                                        <%= image_tag "twitter.png"%>
-                                    </div>
-                                </a>
-                                <a href="instagram.com">
-                                    <div class="logoImage">
-                                        <%= image_tag "instagram.png"%>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="contactRight ">
-                    <script>
-                        let map;
-                        function initMap() {
-                        map = new google.maps.Map(document.getElementById("map"), {
-                            center: { lat: -34.397, lng: 150.644 },
-                            zoom: 8,
-                        });
-                        }
-
-                        window.initMap = initMap;
-                    </script>
-                    <div id="map">
-                    </div>
-                </div>
+                <div id="googleMap"></div>
+                <script>
+                    function myMap() {
+                        var location = new google.maps.LatLng(50.35159,19.63051)
+                        var mapProp= {
+                            center: location,
+                            zoom:15,
+                        };
+                        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                        var marker = new google.maps.Marker({
+                            position: location,
+                            label: {
+                                color: 'black',
+                                fontWeight: 'bold',
+                                text: 'Zoo Pazurek'
+                            },
+                            map:map,
+                        })
+                    }
+                    myMap();
+                </script>
             </div>
         </div>
     </div>
