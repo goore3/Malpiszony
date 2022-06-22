@@ -42,35 +42,40 @@
         <div id="main-content">
             <div id="admin-nav-bar">
                 <div class="nav-bar-elem">
-                    <div class="nav-icon">  
+                    <div class="nav-icon main-icon  ">
+                        <%= image_tag "domek.png"%>  
                     </div>
                     <div class="nav-text">
                         <%= link_to 'Strona główna', admin_dashboard_index_url %> 
                     </div>
                 </div>
                 <div class="nav-bar-elem">
-                    <div class="nav-icon">
+                    <div class="nav-icon animal-icon">
+                        <%= image_tag "zwierzeta.png"%>
                     </div>
                     <div class="nav-text">
                         <%= link_to 'Zwierzęta', admin_animals_url %>
                     </div>
                 </div>
                 <div class="nav-bar-elem">
-                    <div class="nav-icon">
+                    <div class="nav-icon enclosure-icon">
+                        <%= image_tag "wybieg.png"%>
                     </div>
                     <div class="nav-text">
                         <%= link_to 'Wybiegi', admin_enclosures_url %>
                     </div>
                 </div>
                 <div class="nav-bar-elem">
-                    <div class="nav-icon">
+                    <div class="nav-icon event-icon">
+                        <%= image_tag "kalendarz.png"%>
                     </div>
                     <div class="nav-text">
                         <%= link_to 'Wydarzenia', admin_events_url %>
                     </div>
                 </div>
                 <div class="nav-bar-elem">
-                    <div class="nav-icon">
+                    <div class="nav-icon reservation-icon">
+                        <%= image_tag "rezerwacje.png"%>
                     </div>
                     <div class="nav-text">
                         <%= link_to 'Rezerwacje', admin_reservations_url %>
